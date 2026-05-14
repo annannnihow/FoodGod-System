@@ -31,8 +31,7 @@ def parse_user_intent(user_input):
     輸出範例：{{"location": "東京新宿", "search_keywords": ["拉麵", "Ramen"]}}
     """
     response = client.models.generate_content(model=MODEL_ID, contents=prompt)
-    clean_text = response.text.replace('```json', '').replace('
-```', '').strip()
+    clean_text = response.text.replace('```json', '').replace('```', '').strip()
     return json.loads(clean_text)
 
 def search_google_places(location, keywords):
