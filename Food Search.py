@@ -17,7 +17,7 @@ except:
 # 初始化 Gemini 客戶端
 client = genai.Client(api_key=GEMINI_API_KEY)
 # 【變更升級】改用 1.5-flash，免費額度給得最大方，最適合目前的網頁專案
-MODEL_ID = 'Gemini 3.1 Flash Lite' 
+MODEL_ID = 'gemini-3.1-flash-lite' 
 
 # --- 3. 核心邏輯函式 (加入防呆機制與快取護盾) ---
 
